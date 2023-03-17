@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Programacion de software</title>
+  </head>
+  <body>
+    <header
+      class="bg-blue-600 h-20 flex items-center text-white px-10 justify-between"
+    >
+      <a href="/">
+        <img
+          src="./assets/images/logo.png"
+          alt="logo"
+          class="w-10 bg-white rounded"
+        />
+      </a>
+
+      <nav class="flex gap-5">
+        <a href="/cursos.html">Cursos</a>
+        <a href="/cuestionario.html">Cuestionario</a>
+        <a href="/senaform.html">Inscripcion</a>
+        <a href="/contacto.html">Contacto</a>
+      </nav>
+    </header>
+    <main class="p-10">
+      <div class="bg-white drop-shadow-lg p-6 rounded">
+        <h2 class="font-bold text-blue-400 pb-6 text-center text-lg">
+          Formulario de Contacto
+        </h2>
+        <div>
+          <form>
+            <div class="flex flex-col gap-2 pb-5">
+              <label for="nombre" class="mb-2 text-sm font-medium">Nombre <span class="text-red-500">*</span></label>
+              <input type="text" name="nombre" id="nombre" class="bg-white border text-gray-900 text-sm rounded-lg w-full p-2.5">
+            </div>
+            <div class="flex flex-col gap-2 pb-5">
+                <label for="email" class="mb-2 text-sm font-medium">Email <span class="text-red-500">*</span></label>
+                <input type="email" name="email" id="email" class="bg-white border text-gray-900 text-sm rounded-lg w-full p-2.5">
+              </div>
+              <div class="flex flex-col gap-2 pb-5">
+                <label for="message" class="mb-2 text-sm font-medium">Mensaje <span class="text-red-500">*</span></label>
+                <textarea name="message" id="message" cols="30" rows="7" class="bg-white border text-gray-900 text-sm rounded-lg w-full p-2.5"></textarea>
+              </div>
+            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 rounded-sm p-2.5 mt-2 text-white">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="h-8 bg-blue-600 text-center text-white flex justify-center items-center"
+    >
+      make with ❤️ by Daniel Villada
+    </footer>
+  </body>
+</html>
