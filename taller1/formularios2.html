@@ -138,6 +138,29 @@
               </div>
             </fieldset>
           </form>
+          <!-- Curriculum Vitae -->
+          <form>
+            <fieldset class="border border-blue-400 rounded p-4 gap-2 flex flex-col">
+              <legend>Curriculum Vitae</legend>
+              <div class="flex flex-col gap-2 pb-5">
+                <label for="dni" class="mb-2 text-sm font-medium">Documento de Identidad <span class="text-red-500">*</span></label>
+                <input type="text" name="dni" id="dni" class="bg-white border text-gray-900 text-sm rounded-lg w-full p-2.5">
+              </div>
+              <div class="flex flex-col gap-2 pb-5">
+                <label for="nombre" class="mb-2 text-sm font-medium">Nombre <span class="text-red-500">*</span></label>
+                <input type="text" name="nombre" id="nombre" class="bg-white border text-gray-900 text-sm rounded-lg w-full p-2.5">
+              </div>
+              <div class="flex flex-col gap-2 pb-5">
+                  <label for="email" class="mb-2 text-sm font-medium">Email <span class="text-red-500">*</span></label>
+                  <input type="email" name="email" id="email" class="bg-white border text-gray-900 text-sm rounded-lg w-full p-2.5">
+                </div>
+                <div class="flex flex-col gap-2 pb-5">
+                  <label for="cv" class="mb-2 text-sm font-medium">Curriculum Vitae <span class="text-red-500">*</span></label>
+                  <textarea name="cv" id="cv" cols="30" rows="7" class="bg-white border text-gray-900 text-sm rounded-lg w-full p-2.5"></textarea>
+                </div>
+              <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 rounded-sm p-2.5 mt-2 text-white">Enviar</button>
+            </fieldset>
+          </form>
         </div>
       </div>
     </main>
