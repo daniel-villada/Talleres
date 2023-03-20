@@ -65,7 +65,7 @@
               class="border border-blue-400 rounded p-4 gap-2 flex flex-col"
             >
               <legend>6. Lista de Paises</legend>
-              <label for="emails" class="mb-2 text-sm font-medium"
+              <label for="pais" class="mb-2 text-sm font-medium"
                 >Seleccione El pais</label
               >
               <select
@@ -93,19 +93,176 @@
               class="border border-blue-400 rounded p-4 gap-2 flex flex-col"
             >
               <legend>7. Login y subida de archivo</legend>
-              <label for="user" class="mb-2 text-sm font-medium"
+              <label for="user" class="mb-2 text-sm font-medium">Usuario</label>
+              <input
+                type="text"
+                name="user"
+                id="user"
+                class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5"
+                placeholder="piedpiper"
+              />
+              <label for="password" class="mb-2 text-sm font-medium"
+                >Contrasena</label
+              >
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5"
+                placeholder="*********"
+              />
+              <label for="file" class="mb-2 text-sm font-medium">Archivo</label>
+              <input
+                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-white p-2.5"
+                aria-describedby="file_input_help"
+                id="file"
+                type="file"
+              />
+              <button
+                type="submit"
+                class="w-full bg-blue-500 hover:bg-blue-600 rounded-sm p-2.5 mt-2 text-white"
+              >
+                Ingreso al sitio
+              </button>
+            </fieldset>
+          </form>
+
+          <!-- Cuestionario - Radio Button-->
+
+          <form>
+            <fieldset
+              class="border border-blue-400 rounded p-4 gap-2 flex flex-col"
+            >
+              <legend>8. Pregunta con 3 opciones usando radio button</legend>
+              <p for="user" class="mb-2 text-md font-light">
+                ¿Cuál es la etiqueta HTML que se utiliza para crear un enlace?
+              </p>
+              <div>
+                <input
+                  type="radio"
+                  id="respuesta-a"
+                  name="respuesta"
+                  value="a"
+                />
+                <label for="respuesta-a">A) &lt;p&gt;</label><br />
+                <input
+                  type="radio"
+                  id="respuesta-b"
+                  name="respuesta"
+                  value="b"
+                />
+                <label for="respuesta-b">B) &lt;a&gt;</label><br />
+                <input
+                  type="radio"
+                  id="respuesta-c"
+                  name="respuesta"
+                  value="c"
+                />
+                <label for="respuesta-c">C) &lt;img&gt;</label><br />
+              </div>
+            </fieldset>
+          </form>
+
+          <!-- upload Files -->
+          <form>
+            <fieldset
+              class="border border-blue-400 rounded p-4 gap-2 flex flex-col"
+            >
+              <legend>9. Subida de archivos</legend>
+              <label for="files" class="mb-2 text-sm font-medium"
+                >Archivos</label
+              >
+              <input
+                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-white p-2.5"
+                id="files"
+                type="file"
+                multiple
+              />
+              <button
+                type="submit"
+                class="w-full bg-blue-500 hover:bg-blue-600 rounded-sm p-2.5 mt-2 text-white"
+              >
+                Enviar Archivos
+              </button>
+            </fieldset>
+          </form>
+
+          <!-- Datos personales-->
+          <form>
+            <fieldset
+              class="border border-blue-400 rounded p-4 gap-2 flex flex-col"
+            >
+              <legend>10. Datos Personales</legend>
+              <label for="fullname" class="mb-2 text-sm font-medium"
+                >Nombre(s) y Apellidos</label
+              >
+              <input
+                type="text"
+                name="fullname"
+                id="fullname"
+                class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5"
+                maxlength="40"
+              />
+              <label for="edad" class="mb-2 text-sm font-medium">Edad</label>
+              <input
+                type="text"
+                name="edad"
+                id="edad"
+                class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5"
+                maxlength="3"
+              />
+              <label for="documento" class="mb-2 text-sm font-medium"
+                >Documento de identidad</label
+              >
+              <input
+                type="text"
+                name="documento"
+                id="documento"
+                class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5"
+                maxlength="10"
+              />
+              <button
+                type="submit"
+                class="w-full bg-blue-500 hover:bg-blue-600 rounded-sm p-2.5 mt-2 text-white"
+              >
+                Enviar Datos
+              </button>
+            </fieldset>
+          </form>
+
+          <!-- Read Only -->
+          <form>
+            <fieldset
+              class="border border-blue-400 rounded p-4 gap-2 flex flex-col"
+            >
+              <legend>11. Read only or disabled</legend>
+              <label for="userReadOnly" class="mb-2 text-sm font-medium"
                 >Usuario</label
               >
-              <input type="text" name="user" id="user" class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5" placeholder="piedpiper">
-              <label for="user" class="mb-2 text-sm font-medium"
-              >Contrasena</label
-            >
-            <input type="password" name="user" id="user" class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5" placeholder="*********">
-            <label for="user" class="mb-2 text-sm font-medium"
-            >Archivo</label
-          >
-          <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-white p-2.5" aria-describedby="file_input_help" id="file_input" type="file">
-          <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 rounded-sm p-2.5 mt-2 text-white">Ingreso al sitio</button>
+              <input
+                type="text"
+                name="userReadOnly"
+                id="userReadOnly"
+                class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5"
+                maxlength="40"
+                value="Daniel"
+                readonly="readonly"
+              />
+              <label for="pass" class="mb-2 text-sm font-medium">Contrasena</label>
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5"
+                maxlength="3"
+                value="Administrador"
+                readonly="readonly"
+              />
+              <label for="description" class="mb-2 text-sm font-medium"
+                >Documento de identidad</label
+              >
+              <textarea name="description" id="description" cols="30" rows="7" class="bg-white border text-gray-400 text-sm rounded-lg w-full p-2.5 disabled:bg-gray-200" disabled>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis culpa deserunt, est pariatur et provident at natus, molestias id voluptatem itaque omnis fuga veniam hic recusandae ad a sed praesentium!
+              </textarea>
             </fieldset>
           </form>
         </div>
