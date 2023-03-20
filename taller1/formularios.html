@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Programacion de software</title>
+  </head>
+  <body class="flex flex-col justify-between min-h-screen">
+    <header
+      class="bg-blue-600 h-20 flex items-center text-white px-10 justify-between"
+    >
+      <a href="/">
+        <img
+          src="./assets/images/logo.png"
+          alt="logo"
+          class="w-10 bg-white rounded"
+        />
+      </a>
+
+      <nav class="flex gap-5">
+        <a href="/cursos.html">Cursos</a>
+        <a href="/formularios.html">Formularios</a>
+        <a href="/senaform.html">Inscripcion</a>
+        <a href="/contacto.html">Contacto</a>
+      </nav>
+    </header>
+    <main class="p-10 flex flex-col">
+      <div class="bg-white drop-shadow-lg p-6 rounded">
+        <h2 class="font-bold text-blue-400 pb-6 text-center text-lg">
+          Formularios
+        </h2>
+        <div class="flex flex-col gap-5">
+          <!-- Email's list -->
+          <form>
+            <fieldset
+              class="border border-blue-400 rounded p-4 gap-2 flex flex-col"
+            >
+              <legend>5. Lista de emails</legend>
+              <label for="emails" class="mb-2 text-sm font-medium"
+                >Seleccione los destinatarios</label
+              >
+              <select
+                name="emails"
+                id="emails"
+                multiple
+                class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5"
+              >
+                <option value="1">johndoe@email.com</option>
+                <option value="2">samantha.smith1234@gmail.com</option>
+                <option value="3">mario.perez_87@yahoo.com</option>
+                <option value="4">emma-jones@hotmail.co.uk</option>
+              </select>
+              <p class="text-gray-300 text-sm">
+                <span class="text-red-400">*</span> para seleccionar multiples
+                valores mantenga presionado ctrl o command
+              </p>
+            </fieldset>
+          </form>
+
+          <!-- Country's Names  -->
+          <form>
+            <fieldset
+              class="border border-blue-400 rounded p-4 gap-2 flex flex-col"
+            >
+              <legend>6. Lista de Paises</legend>
+              <label for="emails" class="mb-2 text-sm font-medium"
+                >Seleccione El pais</label
+              >
+              <select
+                name="pais"
+                id="pais"
+                class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5"
+              >
+                <optgroup label="America">
+                  <option value="US">Estados unidos</option>
+                  <option value="MX">Mexico</option>
+                  <option value="CO">Colombia</option>
+                </optgroup>
+                <optgroup label="Europa">
+                  <option value="ES">Espana</option>
+                  <option value="FR">Francia</option>
+                  <option value="UK">Ucrania</option>
+                </optgroup>
+              </select>
+            </fieldset>
+          </form>
+
+          <!-- Login & upload File -->
+          <form>
+            <fieldset
+              class="border border-blue-400 rounded p-4 gap-2 flex flex-col"
+            >
+              <legend>7. Login y subida de archivo</legend>
+              <label for="user" class="mb-2 text-sm font-medium"
+                >Usuario</label
+              >
+              <input type="text" name="user" id="user" class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5" placeholder="piedpiper">
+              <label for="user" class="mb-2 text-sm font-medium"
+              >Contrasena</label
+            >
+            <input type="password" name="user" id="user" class="bg-white border text-gray-900 active:border-blue-400 text-sm rounded-lg w-full p-2.5" placeholder="*********">
+            <label for="user" class="mb-2 text-sm font-medium"
+            >Archivo</label
+          >
+          <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-white p-2.5" aria-describedby="file_input_help" id="file_input" type="file">
+          <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 rounded-sm p-2.5 mt-2 text-white">Ingreso al sitio</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="h-8 bg-blue-600 text-center text-white flex justify-center items-center"
+    >
+      make with ❤️ by Daniel Villada
+    </footer>
+  </body>
+</html>
