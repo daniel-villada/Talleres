@@ -1,0 +1,16 @@
+
+.banner_online{
+    animation: animateFloating 4s ease-in-out infinite;
+}
+
+@keyframes animateFloating{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
