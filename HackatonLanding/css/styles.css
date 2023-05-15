@@ -1,36 +1,31 @@
-
-.banner_online{
-    animation: animateFloating 3s ease-in-out infinite;
+.banner_online {
+  animation: animateFloating 3s ease-in-out infinite;
 }
 
-
-.pic{
-    overflow: hidden;
+.pic {
+  overflow: hidden;
 }
 
-.tilt_effect img {  
-    -webkit-transition: all 0.5s ease;
-          -moz-transition: all 0.5s ease;
-              -o-transition: all 0.5s ease;
-           -ms-transition: all 0.5s ease;
-                  transition: all 0.5s ease;
-       }
-  .tilt_effect img:hover {
-         -webkit-transform: rotate(10deg);
-            -moz-transform: rotate(10deg);
-                 -o-transform: rotate(10deg);
-              -ms-transform: rotate(10deg);
-                  }
+.tilt_effect img {
+    animation: rotating 6s ease-in-out infinite;
+}
+
 
 /* Keyframes Animations */
-@keyframes animateFloating{
+@keyframes animateFloating {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rotating{
     0%{
-        transform: translateX(0px);
-    }
-    50%{
-        transform: translateX(10px);
-    }
-    100%{
-        transform: translateX(0px);
+        transform: rotate3d(4,30,4,-340deg);
     }
 }
