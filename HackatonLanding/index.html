@@ -112,42 +112,45 @@
     <div class="flex px-10 justify-center items-center">
       <div class="w-[50%] shadow-lg">
         <form
-          action="#"
+          action="procesarFormulario.php"
+          method="post"
           class="flex flex-col gap-4 bg-slate-50 rounded-xl px-4 py-8"
         >
           <label for="name" class="font-bold">Name:</label>
           <input
             type="text"
             id="name"
+            name="name"
             placeholder="your name"
             class="border rounded p-2"
           />
           <label for="email" class="font-bold">Email:</label>
           <input
             type="email"
-            id="name"
+            id="email"
+            name="email"
             placeholder="pieppiper@email.com"
             class="border rounded p-2"
           />
-          <label for="activities" class="font-bold">Select a meetup:</label>
-          <select name="activities" id="activities" class="border rounded p-2">
+          <label for="meetups" class="font-bold">Select a meetup:</label>
+          <select id="meetups" name="meetups" class="border rounded p-2">
             <option value="default" selected>Select an meetup</option>
-            <option value="#">
+            <option value="Evento 1">
               Cómo funciona OpenAI y qué nos depara el futuro de la inteligencia
               artificial
             </option>
-            <option value="#">
+            <option value="Evento 2">
               Construyendo un bot de chat inteligente con OpenAI y ChatGPT
             </option>
-            <option value="#">
+            <option value="Evento 3">
               El impacto de ChatGPT en la atención al cliente y el servicio al
               cliente
             </option>
-            <option value="#">
+            <option value="Evento 4">
               Cómo la inteligencia artificial está cambiando la forma en que
               interactuamos con los chatbots
             </option>
-            <option value="#">
+            <option value="Evento 5">
               Desmitificando los sesgos en el lenguaje natural: cómo OpenAI y
               ChatGPT están trabajando para combatir la discriminación
             </option>
@@ -155,11 +158,11 @@
           <label for="schedules" class="font-bold">Select the schedule:</label>
           <select name="schedules" id="schedules" class="border rounded p-2">
             <option value="default" selected>Select the schedule</option>
-            <option value="#">24th - 26th at 9:00 AM</option>
-            <option value="#">24th - 26th at 11:00 AM</option>
-            <option value="#">24th - 26th at 1:00 PM</option>
-            <option value="#">24th - 26th at 3:00 PM</option>
-            <option value="#">24th - 26th at 5:00 AM</option>
+            <option value="Horario 1">24th - 26th at 9:00 AM</option>
+            <option value="Horario 2">24th - 26th at 11:00 AM</option>
+            <option value="Horario 3">24th - 26th at 1:00 PM</option>
+            <option value="Horario 4">24th - 26th at 3:00 PM</option>
+            <option value="Horario 5">24th - 26th at 5:00 AM</option>
           </select>
           <button
             class="mt-4 rounded bg-green-400 hover:bg-green-500 p-3 text-xl text-white font-bold"
