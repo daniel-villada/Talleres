@@ -1,70 +1,46 @@
-<?php
-?>
-<!DOCTYPE html>
-<html lang="en">
+<?php include "./showData.php"; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crud - Sena</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <!-- Custom Tailwindcss colors -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#00257E',
-                        disabled: '#D9D9D9',
-                        secondary: '#A0A0A0',
-                        warning: '#FD8127',
-                        danger: '#FD3030'
-                    }
-                }
-            }
-        }
-    </script>
-</head>
+<?php include "includes/Header.php"; ?>
 
-<body>
-    <div class="bg-primary h-32 flex justify-start items-center px-20">
-        <p class="text-white text-4xl font-bold">CRUD</p>
-    </div>
-    <div class="flex flex-col justify-center bg-disabled h-60 px-20">
-        <div class="flex bg-white h-24 rounded-lg justify-between items-center px-20">
-            <h1 class="text-3xl text-primary font-medium">USUARIOS</h1>
-            <div class="flex gap-4 justify-center items-center w-36 h-12 bg-primary text-white rounded">
-                <ion-icon name="person-add" class="text-2xl"></ion-icon>
-                <a href="#" class="text-2xl font-light">agregar</a>
-            </div>
+<div class="flex flex-col justify-center bg-disabled h-60 px-20">
+    <div class="flex bg-white h-24 rounded-lg justify-between items-center px-20">
+        <h1 class="text-3xl text-primary font-medium">USUARIOS</h1>
+        <div class="flex justify-center items-center w-36 h-12 bg-primary text-white rounded">
+            <a href="create.php" class="text-2xl font-light flex gap-4 justify-center items-center "><ion-icon name="person-add" class="text-2xl"></ion-icon>agregar</a>
         </div>
     </div>
-    <div class="h-[64vh] px-20 py-14">
-            <table class="w-full text-center border-2">
-                <tr class="bg-primary text-white text-xl h-14">
-                    <th class="rounded-tl-lg">ID</th>
-                    <th>Nombre</th>
-                    <th>Correo</th>
-                    <th>Ocupación</th>
-                    <th>Teléfono</th>
-                    <th class="rounded-tr-lg">Acciones</th>
-                </tr>
-                <tr class="text-secondary text-lg">
-                    <td>1</td>
-                    <td>daniel villada</td>
-                    <td>developer@email.com</td>
-                    <td>developer</td>
-                    <td>3175355243</td>
-                    <td class="flex justify-center gap-4">
-                        <a href="#"><ion-icon name="ios-create" class="text-warning text-4xl"></ion-icon></a>
-                        <a href="#"><ion-icon name="ios-trash" class="text-danger text-4xl"></ion-icon></a>
-                    </td>
-                </tr>
-            </table>
-    </div>
-    <!-- IOINICONS -->
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-</body>
-
-</html>
+</div>
+<div class="px-40 py-20">
+    <table class="w-full drop-shadow-lg">
+        <thead class="bg-primary border-b-2 border-gray-200 text-white">
+            <tr class="">
+                <th class="rounded-tl-lg p-3">ID</th>
+                <th class="p-3 text-lg font-semibold tracking-wide text-left">Nombre</th>
+                <th class="p-3 text-lg font-semibold tracking-wide text-left">Correo</th>
+                <th class="p-3 text-lg font-semibold tracking-wide text-left">Ocupación</th>
+                <th class="p-3 text-lg font-semibold tracking-wide text-left">Teléfono</th>
+                <th class="rounded-tr-lg p-3">Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white text-secondary text-lg">
+            <?php
+            while ($datos = $getData->fetch_array()) {
+                echo '
+                        <tr class="border-b-2">
+                            <td class="p-3 text-md text-center font-light">' . $datos["id"] . '</td>
+                            <td class="p-3 text-md text-left font-light">' . $datos["name"] . '</td>
+                            <td class="p-3 text-md text-left font-light">' . $datos["email"] . '</td>
+                            <td class="p-3 text-md text-left font-light">' . $datos["ocupation"] . '</td>
+                            <td class="p-3 text-md text-left font-light">' . $datos["phone_number"] . '</td>
+                            <td class="flex justify-center items-center  py-4 gap-4">
+                                <a href="#"><ion-icon name="ios-create" class="text-warning text-4xl"></ion-icon></a>
+                                <a href="#"><ion-icon name="ios-trash" class="text-danger text-4xl"></ion-icon></a>
+                            </td>
+                        </tr>
+                        ';
+            }
+            ?>
+        </tbody>
+    </table>
+</div>
+<?php include "includes/Footer.php"; ?>
