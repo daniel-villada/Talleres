@@ -1,5 +1,6 @@
 <?php include "./showData.php"; ?>
 
+<?php $title = "Crud - Index"; ?>
 <?php include "includes/Header.php"; ?>
 
 <div class="flex flex-col justify-center bg-disabled h-60 px-20">
@@ -24,22 +25,19 @@
         </thead>
         <tbody class="bg-white text-secondary text-lg">
             <?php
-            while ($datos = $getData->fetch_array()) {
-                echo '
-                        <tr class="border-b-2">
-                            <td class="p-3 text-md text-center font-light">' . $datos["id"] . '</td>
-                            <td class="p-3 text-md text-left font-light">' . $datos["name"] . '</td>
-                            <td class="p-3 text-md text-left font-light">' . $datos["email"] . '</td>
-                            <td class="p-3 text-md text-left font-light">' . $datos["ocupation"] . '</td>
-                            <td class="p-3 text-md text-left font-light">' . $datos["phone_number"] . '</td>
-                            <td class="flex justify-center items-center  py-4 gap-4">
-                                <a href="#"><ion-icon name="ios-create" class="text-warning text-4xl"></ion-icon></a>
-                                <a href="#"><ion-icon name="ios-trash" class="text-danger text-4xl"></ion-icon></a>
-                            </td>
-                        </tr>
-                        ';
-            }
-            ?>
+            while ($datos = $getData->fetch_array()) { ?>
+                <tr class="border-b-2">
+                    <td class="p-3 text-md text-center font-light"><?php echo $datos['id'] ?></td>
+                    <td class="p-3 text-md text-left font-light"><?php echo $datos['name'] ?></td>
+                    <td class="p-3 text-md text-left font-light"><?php echo $datos['email'] ?></td>
+                    <td class="p-3 text-md text-left font-light"><?php echo $datos['ocupation'] ?></td>
+                    <td class="p-3 text-md text-left font-light"><?php echo $datos['phone_number'] ?></td>
+                    <td class="flex justify-center items-center  py-4 gap-4">
+                        <a href="edit.php?id=<?php echo $datos["id"] ?>"><ion-icon name="ios-create" class="text-warning text-4xl"></ion-icon></a>
+                        <a href="deleteData.php?id=<?php echo $datos["id"] ?>"><ion-icon name="ios-trash" class="text-danger text-4xl"></ion-icon></a>
+                    </td>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
 </div>

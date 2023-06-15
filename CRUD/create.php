@@ -1,5 +1,6 @@
 <?php include "sendData.php" ?>
 
+<?php $title = "Crud - Create"; ?>
 <?php include "includes/Header.php"; ?>
 <div class="flex flex-col justify-center bg-disabled h-60 px-20">
     <div class="flex bg-white h-24 rounded-lg justify-between items-center px-20">
